@@ -46,7 +46,7 @@ You can subclass `JMTabItem` and `JMSelectionView` to completely customize the v
 
 ## Installation
 
-If you prefer to use JMTabView as a dynamic library in your project, please be sure to add `-ObjC -all_load` to your target's `Other Linker Flags`.  Alternatively, you can reference the .h and .m files directly.
+You can either add the built library to your project or you can reference the .h and .m files directly.
 
 ## Acknowledgements
 

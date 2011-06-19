@@ -1,5 +1,7 @@
 #import "UIView+InnerShadow.h"
+#import "JMTabCommon.h"
 
+JM_FIX_CATEGORY_BUG(UIView_InnerShadow);
 @implementation UIView (InnerShadow)
 
 // sourced from http://stackoverflow.com/questions/4431292/inner-shadow-effect-on-uiview-layer

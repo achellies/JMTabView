@@ -27,7 +27,9 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "UIView+Size.h"
+#import "JMTabCommon.h"
 
+JM_FIX_CATEGORY_BUG(UIView_Size);
 @implementation UIView (Size)
 
 - (void)setSize:(CGSize)size;

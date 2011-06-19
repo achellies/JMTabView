@@ -28,7 +28,9 @@
 
 #import "UIView+Positioning.h"
 #import "UIView+Size.h"
+#import "JMTabCommon.h"
 
+JM_FIX_CATEGORY_BUG(UIView_Positioning);
 @implementation UIView (Positioning)
 
 - (void)centerInRect:(CGRect)rect;

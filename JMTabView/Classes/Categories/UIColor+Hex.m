@@ -1,7 +1,9 @@
 //  Created by Jason Morrissey
 
 #import "UIColor+Hex.h"
+#import "JMTabCommon.h"
 
+JM_FIX_CATEGORY_BUG(UIColor_Hex);
 @implementation UIColor (Hex)
 
 + (UIColor*) colorWithHex:(long)hexColor;

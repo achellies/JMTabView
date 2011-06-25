@@ -7,6 +7,7 @@
 
 @interface JMTabView()
 @property (nonatomic,retain) JMTabContainer * tabContainer;
+-(void)setup;
 @end
 
 @implementation JMTabView
@@ -26,13 +27,21 @@
     self = [super initWithFrame:frame];
     if (self) 
     {
-        [self setBackgroundLayer:[[[BarBackgroundLayer alloc] init] autorelease]];
-        self.backgroundColor = [UIColor clearColor];
-        self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        self.tabContainer = [[[JMTabContainer alloc] initWithFrame:self.bounds] autorelease];
-        [self addSubview:self.tabContainer];
+        [self setup];
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [self setup];
+}
+
+- (void)setup {
+    [self setBackgroundLayer:[[[BarBackgroundLayer alloc] init] autorelease]];
+    self.backgroundColor = [UIColor clearColor];
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    self.tabContainer = [[[JMTabContainer alloc] initWithFrame:self.bounds] autorelease];
+    [self addSubview:self.tabContainer];
 }
 
 - (void)setBackgroundLayer:(CALayer *)backgroundLayer;

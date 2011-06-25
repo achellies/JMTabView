@@ -37,7 +37,8 @@
 }
 
 - (void)setup {
-    [self setBackgroundLayer:[[[BarBackgroundLayer alloc] init] autorelease]];
+  
+    [self setBackgroundLayer:[[[BarBackgroundLayer alloc] initWithFrame:self.layer.bounds] autorelease]];
     self.backgroundColor = [UIColor clearColor];
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.tabContainer = [[[JMTabContainer alloc] initWithFrame:self.bounds] autorelease];

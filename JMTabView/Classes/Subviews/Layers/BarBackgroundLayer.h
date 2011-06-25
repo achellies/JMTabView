@@ -6,4 +6,5 @@
 
 @interface BarBackgroundLayer : CALayer
 
+- (id)initWithFrame:(CGRect)frame;
 @end

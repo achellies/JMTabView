@@ -61,6 +61,7 @@
 - (void)layoutSubviews;
 {
     [self.tabContainer centerInSuperView];
+    [self setBackgroundLayer:[[[BarBackgroundLayer alloc] initWithFrame:self.layer.bounds] autorelease]];
 }
 
 #pragma Mark -

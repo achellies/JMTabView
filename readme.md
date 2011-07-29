@@ -1,4 +1,4 @@
-## JMTabView
+## JMTabView (ARC-version)
 
 This is a dark-themed and easy to use tab view created entirely using Core Graphics, so that it is easy to drop-in to your projects and operates smoothly on iOS devices.  The library itself will also be used in Alien Blue's upcoming iOS updates.
 

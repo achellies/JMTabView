@@ -16,11 +16,11 @@
     self = [super init];
     if (self)
     {
-        CAGradientLayer * gradientLayer = [[[CAGradientLayer alloc] init] autorelease];
+        CAGradientLayer * gradientLayer = [[CAGradientLayer alloc] init];
         UIColor * startColor = [UIColor colorWithHex:0x282928];
         UIColor * endColor = [UIColor colorWithHex:0x4a4b4a];
         gradientLayer.frame = frame;
-        gradientLayer.colors = [NSArray arrayWithObjects:(id)[startColor CGColor], (id)[endColor CGColor], nil];
+        gradientLayer.colors = [NSArray arrayWithObjects:(__bridge id)[startColor CGColor], (__bridge id)[endColor CGColor], nil];
         [self insertSublayer:gradientLayer atIndex:0];    
     }
     return self;

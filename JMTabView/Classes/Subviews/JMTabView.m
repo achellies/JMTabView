@@ -17,9 +17,7 @@
 
 - (void)dealloc;
 {
-    self.tabContainer = nil;
     self.delegate = nil;
-    [super dealloc];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -38,10 +36,10 @@
 
 - (void)setup {
   
-    [self setBackgroundLayer:[[[BarBackgroundLayer alloc] initWithFrame:self.layer.bounds] autorelease]];
+    [self setBackgroundLayer:[[BarBackgroundLayer alloc] initWithFrame:self.layer.bounds]];
     self.backgroundColor = [UIColor clearColor];
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    self.tabContainer = [[[JMTabContainer alloc] initWithFrame:self.bounds] autorelease];
+    self.tabContainer = [[JMTabContainer alloc] initWithFrame:self.bounds];
     [self addSubview:self.tabContainer];
 }
 
@@ -61,7 +59,7 @@
 - (void)layoutSubviews;
 {
     [self.tabContainer centerInSuperView];
-    [self setBackgroundLayer:[[[BarBackgroundLayer alloc] initWithFrame:self.layer.bounds] autorelease]];
+    [self setBackgroundLayer:[[BarBackgroundLayer alloc] initWithFrame:self.layer.bounds]];
 }
 
 #pragma Mark -

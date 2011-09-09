@@ -14,6 +14,7 @@
 
 @synthesize tabContainer = tabContainer_;
 @synthesize delegate = delegate_;
+@synthesize tabItemFont;
 
 - (void)dealloc;
 {
@@ -40,7 +41,18 @@
     self.backgroundColor = [UIColor clearColor];
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.tabContainer = [[JMTabContainer alloc] initWithFrame:self.bounds];
+    self.tabItemFont = kTabItemFont;
     [self addSubview:self.tabContainer];
+}
+
+- (void)setTabItemFont:(UIFont *)font {
+    self.tabContainer.tabItemFont = font;
+    [self setNeedsDisplay];
+    [self setNeedsLayout];
+}
+
+-(UIFont*)tabItemFont {
+    return self.tabContainer.tabItemFont;
 }
 
 - (void)setBackgroundLayer:(CALayer *)backgroundLayer;
@@ -75,6 +87,8 @@
 
 #pragma Mark -
 #pragma External Interface
+
+
 
 - (void)setMomentary:(BOOL)momentary;
 {

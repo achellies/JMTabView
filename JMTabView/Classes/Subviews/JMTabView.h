@@ -17,7 +17,7 @@
 #pragma Mark -
 #pragma Mark - JMTabView
 
-@interface JMTabView : UIView 
+@interface JMTabView : UIView
 
 - (void)setMomentary:(BOOL)momentary;
 - (void)didSelectItemAtIndex:(NSUInteger)itemIndex;
@@ -25,6 +25,7 @@
 - (void)addTabItemWithTitle:(NSString *)title icon:(UIImage *)icon;
 - (void)setSelectedIndex:(NSUInteger)itemIndex;
 @property (nonatomic,assign) IBOutlet id<JMTabViewDelegate> delegate;
+@property (nonatomic,strong) UIFont *tabItemFont;
 
 #if NS_BLOCKS_AVAILABLE
 - (void)addTabItemWithTitle:(NSString *)title icon:(UIImage *)icon executeBlock:(JMTabExecutionBlock)executeBlock;

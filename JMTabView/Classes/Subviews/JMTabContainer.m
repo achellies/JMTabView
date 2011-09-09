@@ -17,7 +17,7 @@
 @synthesize selectedIndex = selectedIndex_;
 @synthesize momentary = momentary_;
 @synthesize itemSpacing = itemSpacing_;
-
+@synthesize tabItemFont = tabItemFont_;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -40,6 +40,7 @@
     
     for (JMTabItem * item in self.tabItems)
     {
+        item.font = self.tabItemFont;
         [item sizeToFit];
         [item setFrame:CGRectMake(xOffset, yOffset, item.frame.size.width, item.frame.size.height)];
         

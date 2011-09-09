@@ -10,7 +10,7 @@
 @synthesize icon = icon_;
 @synthesize fixedWidth = fixedWidth_;
 @synthesize executeBlock = executeBlock_;
-
+@synthesize font=font_;
 
 - (id)initWithTitle:(NSString *)title icon:(UIImage *)icon;
 {
@@ -19,6 +19,7 @@
     {
         self.title = title;
         self.icon = icon;
+        self.font = kTabItemFont;
         self.backgroundColor = [UIColor clearColor];
         
         [self setIsAccessibilityElement:YES];
@@ -29,9 +30,14 @@
     return self;
 }
 
+-(void)setFont:(UIFont *)font {
+    font_ = font;
+    [self setNeedsDisplay];
+}
+
 - (CGSize) sizeThatFits:(CGSize)size;
 {
-    CGSize titleSize = [self.title sizeWithFont:kTabItemFont];
+    CGSize titleSize = [self.title sizeWithFont:self.font];
     
     CGFloat width = titleSize.width;
     
@@ -87,9 +93,9 @@
     
     [kTabItemTextColor set];
 
-    CGFloat heightTitle = [self.title sizeWithFont:kTabItemFont].height;
+    CGFloat heightTitle = [self.title sizeWithFont:self.font].height;
     CGFloat titleYOffset = (self.bounds.size.height - heightTitle) / 2;
-    [self.title drawAtPoint:CGPointMake(xOffset, titleYOffset) withFont:kTabItemFont];
+    [self.title drawAtPoint:CGPointMake(xOffset, titleYOffset) withFont:self.font];
     
     CGContextRestoreGState(context);
 }

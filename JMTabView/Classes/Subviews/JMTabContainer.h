@@ -13,7 +13,7 @@
 @property (assign) BOOL momentary;
 @property (assign) NSUInteger selectedIndex;
 @property (assign) CGFloat itemSpacing;
-
+@property (assign) UIFont *tabItemFont;
 - (BOOL)isItemSelected:(JMTabItem *)tabItem;
 - (void)itemSelected:(JMTabItem *)tabItem;
 - (void)addTabItem:(JMTabItem *)tabItem;

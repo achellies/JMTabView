@@ -7,12 +7,14 @@
 typedef void(^JMTabExecutionBlock)(void);
 #endif
 
-@interface JMTabItem : UIButton
+@interface JMTabItem : UIButton {
+    UIFont *font_;
+}
 
 @property (nonatomic,retain) NSString * title;
 @property (nonatomic,retain) UIImage * icon;
 @property (nonatomic) CGFloat fixedWidth;
-
+@property (nonatomic,strong) UIFont *font;
 - (id)initWithTitle:(NSString *)title icon:(UIImage *)icon;
 -(BOOL)isSelectedTabItem;
 

@@ -8,7 +8,7 @@
 -(id)init;
 {
     //original default by JMTabView
-    return [self initWithFrame:CGRectMake(0, 0, 1024, 60)];
+    return [self initWithFrame:CGRectMake(0, 0, 1024, (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) ? 48 : 60)];
 }
 
 - (id)initWithFrame:(CGRect)frame {
